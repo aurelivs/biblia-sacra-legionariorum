@@ -1,6 +1,6 @@
 import discord
 import re
-import book_lists
+from book_lists.books import at_1, at_2, nt_1, nt_2
 from discord.ext import commands
 from functions import pegar_versiculo
 
@@ -18,7 +18,7 @@ bot = commands.Bot(intents=intents)
         name='livro', 
         description='Selecione um livro do Antigo Testamento', 
         required=True, 
-        choices=book_lists.at_1
+        choices=at_1
     )
 
 @discord.option(
@@ -62,7 +62,7 @@ async def biblia1(
         name='livro',
         description='Selecione um livro do Antigo Testamento', 
         required=True, 
-        choices=book_lists.at_2
+        choices=at_2
     )
 
 @discord.option(
@@ -100,7 +100,7 @@ async def biblia2(
         name='livro', 
         description='Selecione um livro do Novo Testamento', 
         required=True, 
-        choices=book_lists.nt_1
+        choices=nt_1
     )
 
 @discord.option(
@@ -135,7 +135,7 @@ async def biblia3(
     name='livro', 
     description='Selecione um livro do Novo Testamento', 
     required=True, 
-    choices=book_lists.nt_2
+    choices=nt_2
     )
 
 @discord.option(
